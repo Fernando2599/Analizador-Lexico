@@ -1,6 +1,6 @@
 git clone [URL]
 //Clona un repositorio remoto en tu máquina local.
-git clone https://github.com/Fernando2599/Metodos-de-solucion-de-ecuaciones.git
+git clone https://github.com/Fernando2599/Analizador-Lexico.git
 
 git init
 //Inicializa un nuevo repositorio Git en el directorio actual.
