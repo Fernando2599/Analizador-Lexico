@@ -1,0 +1,164 @@
+git clone [URL]
+//Clona un repositorio remoto en tu máquina local.
+git clone https://github.com/Fernando2599/Metodos-de-solucion-de-ecuaciones.git
+
+git init
+//Inicializa un nuevo repositorio Git en el directorio actual.
+
+git add [archivos]
+//Agrega archivos al área de preparación para el próximo commit.
+
+git commit -m "[mensaje]"
+//Crea un nuevo commit con los cambios en el área de preparación y un mensaje descriptivo.
+
+git status
+//Muestra el estado actual de tu repositorio, incluyendo los cambios pendientes y los archivos en el área de preparación.
+
+git log
+//Muestra el historial de commits con detalles como autor, fecha y mensaje.
+
+git pull
+//Obtiene y fusiona los cambios del repositorio remoto en tu rama actual.
+
+git push [origen] [rama]
+//Envía tus commits locales a un repositorio remoto y rama específicos.
+
+git branch
+//Muestra una lista de ramas en el repositorio y resalta la rama actual.
+
+git checkout [rama/commit]
+//Cambia a una rama específica o a un commit anterior.
+
+git merge [rama]
+//Fusiona una rama específica en la rama actual.
+
+git remote -v
+//Muestra los repositorios remotos configurados junto con sus URL.
+
+git remote add [nombre] [URL]
+//Agrega un nuevo repositorio remoto con un nombre dado.
+
+git diff
+//Muestra las diferencias no confirmadas entre el directorio de trabajo y el área de preparación.
+
+git reset [archivo]
+//Descarta los cambios en el archivo especificado en el área de preparación.
+
+git stash
+//Guarda temporalmente los cambios no confirmados para trabajar en otra cosa.
+
+git branch [nombre]
+//Crea una nueva rama con el nombre especificado.
+
+git rm [archivo]
+//Elimina un archivo del repositorio y del sistema de control de versiones.
+
+git tag [nombre] [commit]
+//Etiqueta un commit específico, comúnmente usado para marcar versiones.
+
+git fetch
+//Obtiene los cambios del repositorio remoto sin fusionarlos en tu rama actual.
+
+
+// Que hacer si lo cambios no funcionan. 
+//Antes de comenzar, asegúrate de que estás en la rama "main" en tu repositorio local.
+//Puedes verificarlo ejecutando:
+
+git branch
+
+//Para obtener los cambios de tu compañero, primero asegúrate de que tu repositorio local
+//esté actualizado. Ejecuta:
+
+git fetch origin
+
+//Esto descargará los cambios del repositorio remoto "origin" sin fusionarlos en tu rama local.
+//Ahora, para fusionar los cambios de tu compañero en tu rama "main", ejecuta:
+
+git pull origin main
+
+//Esto traerá los cambios realizados por tu compañero en la rama "main" del repositorio remoto 
+//"origin" y los fusionará en tu rama "main" local.
+
+///////////////////// En dado caso de: "existe un archivo en el repositorio que yo no tengo" ///////////
+
+//Forzar la Actualización: Puedes intentar forzar una actualización completa de tu repositorio
+//local utilizando los siguientes comandos:
+
+git fetch --all
+
+git reset --hard origin/main
+
+//Esto descargará todos los cambios del repositorio remoto y restablecerá tu rama local
+//"main" al estado actualizado.
+
+NOTA: Recuerda hacer esto desde tu carptea del proyecto. En caso contrario NO funcionara. 
+
+//Reclonar el Repositorio 
+//Si el problema persiste, puedes considerar reclonar el repositorio 
+//desde cero para asegurarte de que tienes todos los archivos actualizados. Esto eliminará tu 
+//repositorio local actual, así que asegúrate de hacer una copia de seguridad de cualquier 
+//trabajo importante antes de hacerlo.
+
+git clone https://github.com/Fernando2599/Metodos-de-solucion-de-ecuaciones.git
+
+(URL del proyecto en GITHUB)
+
+//Actualizar tu repositorio local con los cambios del repositorio remoto a través de Git Bash 
+//implica utilizar algunos de los comandos que hemos discutido anteriormente. Aquí está cómo puedes hacerlo:
+//Asegúrate de estar en la rama correcta utilizando el comando:
+
+git branch
+
+//Si no estás en la rama deseada, puedes cambiar a ella usando:
+
+git checkout nombre_de_la_rama
+
+//Actualiza el repositorio remoto con los cambios más recientes sin fusionarlos aún en tu rama local:
+
+git fetch origin
+
+//Si deseas fusionar los cambios en tu rama local, utiliza:
+
+git merge origin/nombre_de_la_rama
+
+Esto fusionará los cambios de la rama remota en tu rama local.
+
+//Si prefieres una versión más concisa, puedes combinar los pasos 3 y 4 en un solo comando utilizando git pull:
+
+git pull origin nombre_de_la_rama
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Si deseas guardar los cambios de tu rama local para que estén disponibles en la rama remota, 
+//debes realizar los siguientes pasos utilizando Git Bash:
+//Asegúrate de haber hecho commit de tus cambios en tu rama local. Si no lo has hecho, utiliza
+//los siguientes comandos:
+
+git add .
+
+git commit -m "Descripción de tus cambios"
+
+//Actualiza tu repositorio local con los cambios más recientes del repositorio remoto:
+
+git fetch origin
+
+//Recuerda Colocar el Push
+
+git push origin nombre_de_la_rama_remota
+
+//Cambia a la rama remota en la que deseas agregar tus cambios. Supongamos que es la rama "main":
+
+git checkout origin/main
+
+//Empuja los cambios fusionados a la rama remota:
+
+git push origin nombre_de_la_rama_remota
+
+//Esto enviará los cambios a la rama remota para que otros miembros del equipo puedan verlos.
+//Cambia de nuevo a tu rama local para seguir trabajando:
+
+git checkout nombre_de_tu_rama_local
+
+//Recuerda reemplazar "nombre_de_tu_rama_local" con el nombre de tu rama local y 
+//"nombre_de_la_rama_remota" con el nombre de la rama remota en la que deseas fusionar tus cambios.
+
